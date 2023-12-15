@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单标签</title>
+    <!--表单就是 html 页面中,用来收集用户信息的所有元素集合.然后把这些信息发送给服务器-->
+</head>
+<body>
+    <!--需求 1:
+    创建一个个人信息注册的表单界面。包含用户名，密码，确认密码。
+    性别(单选)，兴趣爱好(多选)，国籍(下 拉列表)。
+    隐藏域，自我评价(多行文本域)。重置，提交。
+
+    <form></form>   是表单标签
+    <input/>        是输入框标签
+        属性：
+        type=text       文本输入框 value设置默认值，即默认情况下显示在输入框里的内容
+        type=password   密码输入框
+        type=radio      单选框 name属性可以对其进行分组，例如<input type="radio" name="sex">男<input type="radio" name="sex">女
+                              checked="checked"表示默认选中，例如<input type="radio" name="sex" checked="checked">男<input type="radio" name="sex">女
+        type=checkbox   复选框 checked="checked"表示默认选中
+        type=reset      重置按钮 value 属性修改按钮上的文本
+        type=submit     提交按钮 value 属性修改按钮上的文本
+        type=button     按钮 value 属性修改按钮上的文本
+        type=file       文件上传域
+        type=hidden     隐藏域 当我们要发送某些信息，而这些信息不需要用户参与，就可以使用隐藏域(提交时候同时发送给服务器)
+
+        select标签    下拉列表框
+            option标签是下拉列表框中的选项 可通过selected="selected"设置默认选中
+
+        textarea标签  表示多行文本输入框 (起始标签和结束标签中的内容是默认值)
+            rows 属性设置可以显示几行的高度
+            cols 属性设置每行可以显示几个字符宽度
+    -->
+
+    <form>
+        用户名称：<input type="text" value="请输入名字"/><br/>
+        用户密码：<input type="password"/><br/>
+        确认密码：<input type="password"/><br/>
+        性别：<input type="radio" name="sex"/>男<input type="radio" name="sex"/>女<br/>
+        兴趣爱好：<input type="checkbox"/>Java<input type="checkbox"/>JavaScript<input type="checkbox"/>C++<br/>
+        国籍：<select>
+            <option>请选择国家</option>
+            <option selected="selected">中国</option>
+            <option>美国</option>
+            <option>英国</option>
+                </select>
+        <br/>
+        自我评价：<textarea rows="10" cols="20">默认值在这里</textarea><br/>
+        <input type="reset" value="恢复默认"/>
+        <input type="submit"/><br/>
+        <input type="file"/>
+        <input type="hidden" name="asdf"/>
+
+
+    </form>
+</body>
+</html>

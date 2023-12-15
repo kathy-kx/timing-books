@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>从左到右，从右到左 练习</title>
+	<style type="text/css">
+		select {
+			width: 100px;
+			height: 140px;
+		}
+		
+		div {
+			width: 130px;
+			float: left;
+			text-align: center;
+		}
+	</style>
+	<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+	<script type="text/javascript">
+		//页面加载完成之后执行
+		$(function (){
+			//第一个按钮：【选中添加到右边】
+			$("button:eq(0)").click(function (){//先用选择器筛选button标签，再匹配索引值为0的元素
+				//思路：左边选中的option标签.appendTo(右边的select标签)
+				$("select[name='sel01'] option:selected").appendTo($("select[name='sel02']") );//selected:匹配所有选中的option
+				//或$("select:eq(0) option:selected").appendTo( $("select:eq(1)") );
+			});
+
+			//第二个按钮：【全部添加到右边】
+			$("button:eq(1)").click(function (){//先用选择器筛选button标签，再匹配索引值为0的元素
+				//思路：左边选中的option标签.appendTo(右边的select标签)
+				$("select[name='sel01'] option").appendTo($("select[name='sel02']") );//selected:匹配所有选中的option
+				//或$("select:eq(0) option").appendTo( $("select:eq(1)") );
+			});
+
+			//第三个按钮：【选中删除到左边】
+			$("button:eq(2)").click(function (){//先用选择器筛选button标签，再匹配索引值为0的元素
+				//思路：右边选中的option标签.appendTo(左边的select标签)
+				$("select[name='sel02'] option:selected").appendTo($("select[name='sel01']") );//selected:匹配所有选中的option
+
+			});
+
+			//第四个按钮：【全部删除到左边】
+			$("button:eq(3)").click(function (){//先用选择器筛选button标签，再匹配索引值为0的元素
+				//思路：右边选中的option标签.appendTo(左边的select标签)
+				$("select[name='sel02'] option").appendTo($("select[name='sel01']") );//selected:匹配所有选中的option
+
+			});
+
+		});
+		
+		
+	
+	</script>
+</head>
+<body>
+
+	<div id="left">
+		<select multiple="multiple" name="sel01">
+			<option value="opt01">选项1</option>
+			<option value="opt02">选项2</option>
+			<option value="opt03">选项3</option>
+			<option value="opt04">选项4</option>
+			<option value="opt05">选项5</option>
+			<option value="opt06">选项6</option>
+			<option value="opt07">选项7</option>
+			<option value="opt08">选项8</option>
+		</select>
+		
+		<button>选中添加到右边</button>
+		<button>全部添加到右边</button>
+	</div>
+
+	<div id="right">
+		<select multiple="multiple" name="sel02">
+		</select>
+		<button>选中删除到左边</button>
+		<button>全部删除到左边</button>
+	</div>
+
+</body>
+</html>

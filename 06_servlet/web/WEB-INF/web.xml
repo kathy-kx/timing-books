@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <!--context-param 是上下文参数(它属于整个 web 工程)-->
+    <context-param>
+        <param-name>username</param-name>
+        <param-value>context</param-value>
+    </context-param>
+    <!--context-param 可配置多组-->
+    <context-param>
+        <param-name>password</param-name>
+        <param-value>root</param-value>
+    </context-param>
+
+
+    <!--servlet标签给Tomcat配置Servlet程序-->
+    <servlet>
+        <servlet-name>HelloServlet</servlet-name>
+        <servlet-class>com.kxzhu.servlet.HelloServlet</servlet-class>
+    <!-- <init-param>是初始化参数-->
+        <init-param>
+            <param-name>username</param-name><!--参数名-->
+            <param-value>root</param-value><!--参数值-->
+        </init-param>
+        <!--init-param可配置多组-->
+        <init-param>
+            <param-name>url</param-name><!--参数名-->
+            <param-value>jdbc:mysql://localhost:3306/test</param-value><!--参数值-->
+        </init-param>
+    </servlet>
+    
+
+    <!--servlet-mapping 标签给 servlet 程序配置访问地址-->
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/hello</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HelloServletReal</servlet-name>
+        <servlet-class>com.kxzhu.servlet.HelloServletReal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServletReal</servlet-name>
+        <url-pattern>/hello2</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>HelloServlet3</servlet-name>
+        <servlet-class>com.kxzhu.servlet.HelloServlet3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet3</servlet-name>
+        <url-pattern>/hello3</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>ContextServlet</servlet-name>
+        <servlet-class>com.kxzhu.servlet.ContextServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextServlet</servlet-name>
+        <url-pattern>/contextServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>

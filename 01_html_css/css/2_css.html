@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!--CSS 和 HTML 的结合方式二-->
+    <meta charset="UTF-8">
+    <title>改进1—css，提高复用性</title>
+    <!--style 标签专门用来定义 css 样式代码-->
+    <style type="text/css">
+        /*<style>里写的是css语法，注释方法和html不同，不能用<!--****-->的方式*/
+        div{
+            border: 1px red solid
+        }
+        span{
+            border: 1px red solid
+        }
+    </style>
+</head>
+<body>
+<!--需求1:分别定义两个div、span标签，分别修改每个div标签的样式为:边框1个像素，实线，红色。-->
+<div>div标签1</div>
+<div>div标签2</div>
+<span>span标签1</span>
+<span>span标签2</span>
+
+</body>
+</html>

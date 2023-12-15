@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onchange内容发生改变事件 动态注册</title>
+    <script type="text/javascript">
+        window.onload = function (){
+            //1. 获取标签对象
+            var selectObj = document.getElementById("sel01"); //selectObj是一个下拉菜单select对象
+
+            //2. 通过标签对象.事件名 = function(){}
+            selectObj.onchange = function (){
+                alert("装备已更改");
+            }
+        }
+
+    </script>
+</head>
+<body>
+    请选择：
+    <!--动态注册onchange事件-->
+    <select id="sel01">
+        <option>--请选择--</option>
+        <option>单手剑</option>
+        <option>大剑</option>
+        <option>弓</option>
+    </select>
+
+</body>
+</html>

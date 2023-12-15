@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="dom4j-1.6.1" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library name="JUnit4">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../java学习课程的资料/3、java web 2020版/9、全部资料备份20221028/05-XML &amp; Tomcat/笔记/Junit4的jar包/hamcrest-core-1.3.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../java学习课程的资料/3、java web 2020版/9、全部资料备份20221028/05-XML &amp; Tomcat/笔记/Junit4的jar包/junit-4.12.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

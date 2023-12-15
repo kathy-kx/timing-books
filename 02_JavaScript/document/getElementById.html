@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document的方法 </title>
+    <script type="text/javascript">
+        /*
+        需求：当用户点击"校验"按钮（事件），要1获取输入框里的内容，2验证其是否合法。
+        验证的规则是：必须由字母、数字、下划线组成。且长度是5-12位。
+        * */
+        function onClickFunc(){ //校验后提示
+            //需求第一部分：获取输入框里的内容
+            //！！！当我们要操作一个标签时，一定要先获取这个标签对象！！！：
+            var usernameObj = document.getElementById("username");
+            // alert(usernameObj);//[object HTMLInputElement],它就是dom对象
+            // alert(usernameObj.type);
+            // alert(usernameObj.id);
+            // alert(usernameObj.value);
+            var usernameText = usernameObj.value;//通过获取标签的属性"value"的值，获取标签对应的文本
+
+            //需求第二部分：验证输入框里的字符串是否符合某些规则（用正则表达式）
+            var patt = /^\w{5,12}$/; //patt是个对象
+
+            var usernameSpanObj = document.getElementById("usernameSpan");//span标签对象[object HTMLSpanElement]
+            // alert(usernameSpanObj.innerHTML);    //innerHTML表示 起始标签和结束标签之间的内容。该属性可读、可写
+
+
+            /*test()方法用于测试参数里的字符串 是否匹配我（方法的调用者patt）的规则
+            如果匹配，则返回true；不匹配则返回false
+            * */
+            if(patt.test(usernameText)){ //正则表达式对象.test(字符串) --> true/false
+                //方法一：使用alert()
+                //alert("用户名合法");
+
+                //方法二：使用innerHTML
+                // usernameSpanObj.innerHTML = "用户名合法";
+                //usernameSpanObj是span标签对象，其中有一个innerHTML属性
+                //innerHTML表示 起始标签和结束标签之间的内容。该属性可读、可写
+
+                //方法三：使用图片+innerHTML
+                usernameSpanObj.innerHTML = "<img src=\"right.png\" width=\"18\" height=\"18\">";
+            }else{
+                // alert("用户名不合法");
+                // usernameSpanObj.innerHTML = "用户名不合法";
+                usernameSpanObj.innerHTML = "<img src=\"wrong.png\" width=\"18\" height=\"18\">";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    用户名：<input type="text" id="username" value=""/>
+    <span id = "usernameSpan" style="color:red;">
+
+    </span>
+    <button onclick="onClickFunc()">校验</button>
+
+</body>
+</html>

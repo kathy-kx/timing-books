@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        //静态注册表单提交事件
+        function onSubmitFunc(){
+            //要验证所有表单项是否合法，如果有一个不合法,就阻止表单提交
+            alert("静态注册表单提交事件，发现不合法");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <!--return false 可以阻止 表单提交 -->
+    <form action="http://localhost:8080" method="get" onsubmit="return onSubmitFunc();">
+        <input type="submit" value="静态注册">
+    </form>
+
+</body>
+</html>

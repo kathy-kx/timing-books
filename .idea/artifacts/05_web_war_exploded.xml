@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="05_web:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/05_web_war_exploded</output-path>
+    <root id="root">
+      <element id="javaee-facet-resources" facet="05_web/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="05_web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$USER_HOME$/Downloads/java web 2020版/资料/05-XML &amp; Tomcat/笔记/JavaWeb需要用到的jar包/druid-1.1.9.jar" />
+          <element id="file-copy" path="$USER_HOME$/Downloads/java web 2020版/资料/05-XML &amp; Tomcat/笔记/JavaWeb需要用到的jar包/mysql-connector-java-5.1.7-bin.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

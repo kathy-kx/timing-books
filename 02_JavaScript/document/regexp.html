@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>正则表达式</title>
+    <script type="text/javascript">
+        // var patt = new RegExp("e");//字符串中是否包含字母"e"
+        // var patt = /e/; //也是正则表达式对象，另一种写法
+
+        // var patt = /[abc]/;  //查找方括号之间的任何字符。patt.test(str)表示查找字符串str中，是否包含a或b或c
+        // var patt = /[a-z]/;  //查找任何从a到z的字符。
+        // var patt = /[A-Z]/;  //查找任何从A到Z的字符。
+        // var patt = /[0-9]/;  //查找是否包含任意数字。
+        // var patt = /\w/; //查找是否包含字母、数字、下划线（用得最多的元字符）
+        // var patt = /a+/; //表示要求字符串中包含至少一个a。
+        // var patt = /a*/; //表示要求字符串中【包含】0个 或 多个a。（包含：只要有一个匹配就停止）
+        // var patt = /a?/; //表示要求字符串中【包含】0个或一个a。（包含：只要有一个匹配就停止）
+        // var patt = /a{3}/;  //n{X}:包含连续的X个n的序列。a{3}：包含连续的3个a
+        // var patt = /a{3,5}/;   //n{X}:包含连续的至少X，至多Y个n 的序列。a{3,5}：包含至少3个连续的a，至多5个连续的a。（只要最少3个满足了就是true）
+        // var patt = /a{3,}/; //n{X,}：包含至少X个n。// a{3,}：至少3个连续的a
+        // var patt = /a$/;    //n$：匹配任何结尾为n的字符串，即字符串必须以n结尾
+        // var patt = /^a/;    //^n：匹配任何开头为n的字符串，即字符串必须以n开头
+
+        //注意：
+        // var patt = /a{3,5}/;    //包含至少3个连续的a
+        // var patt = /^a{3,5}$/;  //要求从头到尾都匹配，即字符串必须是连续的a，至少3个、至多5个
+
+        var patt = /^\w{5,12}$/; //必须是字母数字下划线，且从头到尾匹配
+
+        var str = "aaa0aa00000_aaa";
+        alert(patt.test(str));
+    </script>
+</head>
+<body>
+
+</body>
+</html>

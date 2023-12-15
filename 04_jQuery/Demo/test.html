@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+    <script type="text/javascript">
+        $(function (){
+            //html()：设置和获取起始标签和结束标签中的内容
+            //不传参数是获取，传递参数是设置
+            alert($("div").html());//获取
+            $("div").html("<h1>我是div中的标题</h1>");//设置
+
+            $("button").click(function (){
+                alert($("username").val());//无参：获取
+                $("username").val("默认设置的"); //传参：设置
+            });
+        });
+    </script>
+</head>
+<body>
+<div>我是div标签 <span>我是div中的span标签</span></div>
+<input type="text" name="username" id="username" />
+<button>操作输入框</button>
+</body>
+</html>

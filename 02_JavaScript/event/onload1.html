@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onload静态注册</title>
+    <script type="text/javascript">
+        //将静态注册的所有代码写在函数里，这样body中只写一句即可
+        function onLoadFunc(){
+            alert("静态注册的onload事件，所有代码");
+        }
+
+    </script>
+</head>
+<body onload="onLoadFunc();"><!--onload事件是浏览器解析完页面之后就会自动触发的事件-->
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单格式化</title> <!--更漂亮-->
+</head>
+<body>
+    <form>
+        <h1 align="center">用户注册</h1>
+        <table align="center">
+            <tr>
+                <td>用户名称：</td>
+                <td><input type="text" value="请输入名字"/></td>
+            </tr>
+            <tr>
+                <td>用户密码：</td>
+                <td><input type="password"/></td>
+            </tr>
+            <tr>
+                <td>确认密码：</td>
+                <td><input type="password"/></td>
+            </tr>
+            <tr>
+                <td>性别：</td>
+                <td>
+                    <input type="radio" name="sex"/>男
+                    <input type="radio" name="sex"/>女
+                </td>
+            </tr>
+            <tr>
+                <td>兴趣爱好：</td>
+                <td><input type="checkbox"/>Java
+                    <input type="checkbox"/>JavaScript
+                    <input type="checkbox"/>C++
+                </td>
+            </tr>
+            <tr>
+                <td>国籍：</td>
+                <td><select>
+                    <option>请选择国家</option>
+                    <option selected="selected">中国</option>
+                    <option>美国</option>
+                    <option>英国</option>
+                    </select></td>
+            </tr>
+            <tr>
+                <td>自我评价：</td>
+                <td><textarea rows="10" cols="20">默认值在这里</textarea></td>
+            </tr>
+            <tr>
+                <td><input type="reset" value="恢复默认"/></td>
+                <td align="center"><input type="submit"/></td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
