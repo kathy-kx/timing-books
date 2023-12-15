@@ -21,5 +21,6 @@
     <orderEntry type="jdk" jdkName="1.8" jdkType="JavaSDK" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="servlet-api" level="project" />
+    <orderEntry type="library" exported="" name="book_lib" level="project" />
   </component>
 </module>
