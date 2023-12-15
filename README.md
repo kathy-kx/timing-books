@@ -15,7 +15,11 @@
     - 删除商品
     - 清空购物车
 
-![前台功能]()
+![登录](https://github.com/kathy-kx/timing-books/blob/main/book_images/%E7%99%BB%E5%BD%95.png)
+
+![首页浏览图书](https://github.com/kathy-kx/timing-books/blob/main/book_images/%E9%A6%96%E9%A1%B5%E6%B5%8F%E8%A7%88%E5%9B%BE%E4%B9%A6.png)
+
+![购物车](https://github.com/kathy-kx/timing-books/blob/main/book_images/%E8%B4%AD%E7%89%A9%E8%BD%A6.png)
 
 ### 1.2 后台功能
 
@@ -27,12 +31,6 @@
     - 删除图书
 - 订单管理（开发中）
 
-![登录待修改]()
-
-![首页浏览图书]()
-
-![购物车]()
-
 ## 2. 使用技术
 
 - 使用Java作为后端开发语言
@@ -41,16 +39,16 @@
 - 使用MySQL数据库存储用户、图书信息
 - 使用Filter过滤器实现后台权限检查
 
-![Java EE三层结构]()
+![Java EE三层结构](https://github.com/kathy-kx/timing-books/blob/main/book_images/JavaEE%E4%B8%89%E5%B1%82%E7%BB%93%E6%9E%84.jpg)
 
 ## 3. 项目启动
 
-1. 下载代码和[sql文件]()。
+1. 下载代码和[sql文件](https://github.com/kathy-kx/timing-books/tree/main/book_db)。
 2. 修改src/jdbc.properties文件中的数据库信息，即修改username和password
 3. 启动navicat并连接数据库。
     - 右键本地连接localhost，选择execute SQL File
     - 依次选择“创建数据库和表.sql”、“创建图书模块库和表.sql”、“创建订单模块表.sql”
     
-    ![数据库]()
+    ![数据库](https://github.com/kathy-kx/timing-books/blob/main/book_images/%E6%95%B0%E6%8D%AE%E5%BA%93.png)
     
 4. 在IDEA中运行项目，访问地址：http://localhost:8080/book/
